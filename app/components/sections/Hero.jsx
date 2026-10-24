@@ -5,7 +5,7 @@ import CurrencyConverter from "../layout/CurrencyConverter";
 
 const Hero = () => {
   return (
-    <div className="bg-[image:var(--pattern-image)]">
+    <div className="h-250 bg-[image:var(--pattern-image)] bg-no-repeat">
       <Header />
       <div className="mt-35 flex flex-col items-center gap-4">
         <div className="flex items-center gap-1 rounded-[100px] border-[1.5px] border-[#0A1519] bg-[#29383E] py-0.5 pr-3">
@@ -36,7 +36,7 @@ const Hero = () => {
         </div>
 
         <div className="mt-25 flex items-center justify-center gap-8">
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col items-end gap-12">
             <div className="flex w-54 flex-col justify-center rounded-[25px] bg-white px-6 py-5">
               <p className="text-base font-medium text-gray-500">
                 Total balance
@@ -49,7 +49,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="flex gap-2.5 rounded-[25px] bg-white px-2 py-5">
+            <div className="mr-20 flex items-center justify-between gap-2.5 rounded-[25px] bg-white px-6 py-5">
               <Image
                 src="/assets/currency-icon.png"
                 alt="Received History"
@@ -67,11 +67,11 @@ const Hero = () => {
             </div>
           </div>
           <CurrencyConverter />
-          <div className="hero-analytic-right">
-            <div className="each-analytic">
-              <p>Net Income</p>
-              <div className="analytic-result">
-                <h4 className="hero-analytic-value">$234.98K</h4>
+          <div className="flex flex-col items-start gap-12">
+            <div className="flex flex-col justify-center rounded-[25px] bg-white px-6 py-5">
+              <p className="text-base font-medium text-gray-500">Net Income</p>
+              <div className="flex items-center justify-between gap-2.5">
+                <h4 className="text-2xl font-semibold text-black">$234.98K</h4>
                 <Image
                   src="/assets/growing-icon.png"
                   alt="Growing Icon"
@@ -81,24 +81,30 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="each-analytic">
-              <div className="happy-clients">
+            <div className="ml-20 flex items-center justify-between gap-2.5 rounded-[25px] bg-white px-6 py-5">
+              <div className="relative flex w-[90px] items-center">
                 <Image
                   src="/assets/client-1.png"
                   alt="Client One"
-                  width={20}
-                  height={20}
+                  width={54}
+                  height={54}
+                  className="absolute left-0"
                 />
                 <Image
                   src="/assets/client-2.png"
                   alt="Client Two"
-                  width={20}
-                  height={20}
+                  width={54}
+                  height={54}
+                  className="absolute right-0"
                 />
               </div>
-              <div className="analytic-result">
-                <h4 className="hero-analytic-value">124,89K+</h4>
-                <p className="hero-analytic-change">Trusted Users</p>
+              <div className="flex flex-col items-start justify-center">
+                <h4 className="text-[22px] font-semibold text-black">
+                  124,89K+
+                </h4>
+                <p className="text-base font-medium text-gray-500">
+                  Trusted Users
+                </p>
               </div>
             </div>
           </div>
