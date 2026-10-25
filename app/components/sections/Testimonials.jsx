@@ -65,23 +65,28 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section className="testimonials">
+    <section className="relative mx-12.5 mt-20 flex flex-col items-center justify-center gap-4">
       <TagBadge text="Testimonials" />
-      <h2 className="testimonails-title">Real Feedback from Satisfied Customers</h2>
-      <p className="testimonails-description">Discover what real clients have to say about how our services have helped them achieve their goals and manage their finances effortlessly.</p>
+      <h2 className="w-[906px] text-center text-[64px] font-semibold text-black">
+        Real Feedback from Satisfied Customers
+      </h2>
+      <p className="w-[598px] text-center text-lg font-medium text-gray-500">
+        Discover what real clients have to say about how our services have
+        helped them achieve their goals and manage their finances effortlessly.
+      </p>
 
-      <div className="testimonials-reviews">
+      <div className="columns-5 gap-4">
         {clientReviews.map((review, index) => (
-          <TestimonialsCard key={index}
+          <TestimonialsCard
+            key={index}
             name={review.name}
             position={review.position}
             review={review.review}
           />
         ))}
-
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Testimonials;
