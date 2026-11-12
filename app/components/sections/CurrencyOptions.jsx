@@ -4,13 +4,13 @@ import CTAButton from "../ui/CTAButton";
 
 const CurrencyOptions = () => {
   return (
-    <section className="mx-12.5 mt-20 flex justify-between">
-      <div className="flex flex-col items-start gap-4">
+    <section className="mx-12.5 mt-20 flex justify-between max-[885px]:flex-col">
+      <div className="flex flex-col items-start gap-4 max-md:w-full">
         <TagBadge text="Limitless currency options" />
-        <h2 className="w-[536px] text-[64px] leading-[64px] font-semibold text-black">
+        <h2 className="w-[536px] text-[4rem] leading-[64px] font-semibold text-black max-md:w-full">
           One account for 90+ currencies worldwide.
         </h2>
-        <p className="w-[455px] text-lg font-medium text-gray-500">
+        <p className="w-[455px] text-lg font-medium text-gray-500 max-md:w-full">
           Our platform allows you to send, receive, and convert currencies
           seamlessly in real-time, all while saving on fees.
         </p>
@@ -54,6 +54,7 @@ const CurrencyOptions = () => {
           alt="Currency Rate"
           width={614}
           height={630}
+          className="w-full max-[885px]:hidden"
         />
       </div>
     </section>

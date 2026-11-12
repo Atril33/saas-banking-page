@@ -22,10 +22,10 @@ const TrustSection = () => {
       <p className="w-[262px] text-center text-base text-white">
         Over 100K+ Entrepreneurs, and business choose us
       </p>
-      <h2 className="w-[798px] text-center text-[64px] font-semibold text-white">
+      <h2 className="w-[798px] text-center text-[4rem] leading-[4rem] font-semibold text-white max-[885px]:w-full">
         Empowering Your Financial Freedom
       </h2>
-      <p className="w-[598px] text-center text-lg font-medium text-gray-500">
+      <p className="max-w-[598px] text-center text-lg font-medium text-gray-500 max-md:w-full">
         Trust us to deliver cutting-edge innovation, transparency, and
         personalized service, all designed to help you achieve financial freedom
       </p>

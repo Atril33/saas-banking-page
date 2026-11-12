@@ -9,6 +9,7 @@ const CurrencyConverter = () => {
         alt="Currency Converter"
         width={52}
         height={52}
+        className="max-[1075px]:hidden"
       />
       <div className="relative flex flex-col items-center justify-center rounded-[25px] bg-white p-3">
         <CurrencyConverterField />
@@ -33,6 +34,7 @@ const CurrencyConverter = () => {
         alt="Converted Currency"
         width={52}
         height={52}
+        className="max-[1075px]:hidden"
       />
     </div>
   );

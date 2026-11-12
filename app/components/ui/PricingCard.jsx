@@ -4,7 +4,7 @@ const PricingCard = ({ title, des, pricing, metric, options }) => {
   return (
     <div className="flex w-full flex-col gap-4 rounded-[32px] border-[2px] border-[#514F4F] bg-[#494949] px-8 py-6">
       <h3 className="text-2xl font-semibold text-white">{title}</h3>
-      <p className="w-74 text-base text-white">{des}</p>
+      <p className="w-full text-base text-white">{des}</p>
       <h4 className="text-4xl font-semibold text-white">
         {pricing} <span className="text-base text-white">{metric}</span>
       </h4>

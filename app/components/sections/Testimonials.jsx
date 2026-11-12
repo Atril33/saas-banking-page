@@ -67,7 +67,7 @@ const Testimonials = () => {
   return (
     <section className="relative mx-12.5 mt-20 flex flex-col items-center justify-center gap-4">
       <TagBadge text="Testimonials" />
-      <h2 className="w-[906px] text-center text-[64px] font-semibold text-black">
+      <h2 className="w-[906px] text-center text-[4rem] font-semibold text-black">
         Real Feedback from Satisfied Customers
       </h2>
       <p className="w-[598px] text-center text-lg font-medium text-gray-500">
@@ -75,7 +75,7 @@ const Testimonials = () => {
         helped them achieve their goals and manage their finances effortlessly.
       </p>
 
-      <div className="columns-5 gap-4">
+      <div className="grid grid-cols-5 gap-4 overflow-clip">
         {clientReviews.map((review, index) => (
           <TestimonialsCard
             key={index}

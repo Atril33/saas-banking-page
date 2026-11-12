@@ -6,7 +6,7 @@ const GrowthCard = ({ value, metric, text, status = false }) => {
       <h3 className="flex items-start gap-1 text-5xl font-bold">
         {value}{" "}
         <span
-          className={`text-[32px] ${status ? "text-[#D2F801]" : "text-black"}`}
+          className={`text-[2rem] ${status ? "text-[#D2F801]" : "text-black"}`}
         >
           {metric}
         </span>

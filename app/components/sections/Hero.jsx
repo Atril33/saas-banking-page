@@ -5,9 +5,9 @@ import CurrencyConverter from "../layout/CurrencyConverter";
 
 const Hero = () => {
   return (
-    <div className="h-250 bg-[image:var(--pattern-image)] bg-no-repeat">
+    <div className="h-250 w-full bg-[image:var(--pattern-image)] bg-no-repeat">
       <Header />
-      <div className="mt-35 flex flex-col items-center gap-4">
+      <div className="mt-35 flex flex-col items-center justify-center gap-4">
         <div className="flex items-center gap-1 rounded-[100px] border-[1.5px] border-[#0A1519] bg-[#29383E] py-0.5 pr-3">
           <p className="rounded-[100px] bg-[#D2F801] px-3 py-0.5 text-sm text-black">
             New
@@ -15,10 +15,10 @@ const Hero = () => {
           <p className="text-sm text-white">Payment cards upgraded</p>
         </div>
 
-        <h1 className="w-[657px] text-center text-[64px] font-semibold text-white">
+        <h1 className="w-[657px] text-center text-[4rem] leading-[4rem] font-semibold text-white max-md:w-full">
           Cross-border payment made easy.
         </h1>
-        <p className="w-[623px] text-center text-xl font-medium text-white">
+        <p className="w-[623px] text-center text-xl font-medium text-white max-md:w-full">
           We help individuals and businesses to securely send and receive money
           globally, without the bank fees.
         </p>
@@ -35,8 +35,8 @@ const Hero = () => {
           </button>
         </div>
 
-        <div className="mt-25 flex items-center justify-center gap-8">
-          <div className="flex flex-col items-end gap-12">
+        <div className="@container relative mt-25 flex w-[90%] items-center justify-center gap-8">
+          <div className="flex flex-col items-end gap-12 max-[1075px]:hidden">
             <div className="flex w-54 flex-col justify-center rounded-[25px] bg-white px-6 py-5">
               <p className="text-base font-medium text-gray-500">
                 Total balance
@@ -49,7 +49,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="mr-20 flex items-center justify-between gap-2.5 rounded-[25px] bg-white px-6 py-5">
+            <div className="mr-20 flex w-54 items-center justify-between gap-2.5 rounded-[25px] bg-white px-4 py-5">
               <Image
                 src="/assets/currency-icon.png"
                 alt="Received History"
@@ -60,14 +60,14 @@ const Hero = () => {
                 <h4 className="text-base font-medium text-gray-500">
                   Received
                 </h4>
-                <p className="text-[22px] font-semibold text-black">
+                <p className="text-[1.375rem] font-semibold text-black">
                   6790.67 EUR
                 </p>
               </div>
             </div>
           </div>
           <CurrencyConverter />
-          <div className="flex flex-col items-start gap-12">
+          <div className="flex flex-col items-start gap-12 max-[1075px]:hidden">
             <div className="flex flex-col justify-center rounded-[25px] bg-white px-6 py-5">
               <p className="text-base font-medium text-gray-500">Net Income</p>
               <div className="flex items-center justify-between gap-2.5">
@@ -99,7 +99,7 @@ const Hero = () => {
                 />
               </div>
               <div className="flex flex-col items-start justify-center">
-                <h4 className="text-[22px] font-semibold text-black">
+                <h4 className="text-[1.375rem] font-semibold text-black">
                   124,89K+
                 </h4>
                 <p className="text-base font-medium text-gray-500">

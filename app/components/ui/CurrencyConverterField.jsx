@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const CurrencyConverterField = () => {
   return (
-    <div className="mb-2 flex items-center justify-between rounded-[20px] border-[12px] border-[#EFF2F1] bg-white">
+    <div className="mb-2 flex w-full items-center justify-between rounded-[20px] border-[12px] border-[#EFF2F1] bg-white">
       <div className="flex items-center justify-center gap-1 p-2 text-base font-medium">
         <Image src="/assets/usd.png" alt="USD" width={28} height={28} />
         USD{" "}

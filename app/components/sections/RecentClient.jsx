@@ -3,10 +3,10 @@ import Image from "next/image";
 const RecentClient = () => {
   return (
     <section className="my-10 flex flex-col items-center justify-center">
-      <h2 className="text-[40px] font-semibold text-black">
+      <h2 className="text-center text-[2.5rem] font-semibold text-black max-md:text-[2rem]">
         Our Recent Clients & Partners
       </h2>
-      <div className="my-4 grid grid-cols-5 gap-4">
+      <div className="align-center my-4 grid grid-cols-5 justify-center gap-4 max-[500px]:grid-cols-2 max-lg:grid-cols-4 max-md:w-[90%] max-sm:grid-cols-3">
         <Image
           src="/assets/logos/ephemeral.png"
           alt="Ephemeral Logo"

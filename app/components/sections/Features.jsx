@@ -6,15 +6,15 @@ const Features = () => {
   return (
     <section className="mx-12.5 mt-20 flex flex-col items-center justify-center gap-4">
       <TagBadge text="Features" />
-      <h2 className="w-[798px] text-center text-[64px] font-semibold text-black">
+      <h2 className="w-[798px] text-center text-[4rem] leading-[4rem] font-semibold text-black max-md:w-full">
         Banking Reimagined for the Future You
       </h2>
-      <p className="w-[598px] text-center text-lg font-medium text-gray-500">
+      <p className="w-[598px] text-center text-lg font-medium text-gray-500 max-md:w-full">
         Trust us to deliver cutting-edge innovation, transparency, and
         personalized service, all designed to help you achieve financial freedom
       </p>
 
-      <div className="mt-4 grid grid-cols-3 justify-items-center gap-4">
+      <div className="mt-4 grid grid-cols-3 justify-items-center gap-4 max-lg:grid-cols-2 max-lg:gap-6 max-md:grid-cols-1">
         <FeatureCard
           icon={
             <Image

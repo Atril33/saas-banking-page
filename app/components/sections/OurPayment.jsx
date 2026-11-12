@@ -7,27 +7,28 @@ import GrowthCard from "../ui/GrowthCard";
 const OurPayment = () => {
   return (
     <section className="mx-12.5 mt-20 flex flex-col">
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex items-start justify-between gap-4 max-[885px]:flex-col">
         <div>
           <Image
             src="/assets/currency-rates.png"
             alt="Currency Rate"
             width={614}
             height={630}
+            className="w-full max-[885px]:hidden"
           />
         </div>
 
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-start gap-4 max-md:w-full">
           <TagBadge text="Smart Payment" />
-          <h2 className="w-[536px] text-[64px] leading-[64px] font-semibold text-black">
+          <h2 className="w-[536px] text-[4rem] leading-[64px] font-semibold text-black max-md:w-full">
             Our payment system is easy to start using.
           </h2>
-          <p className="w-[455px] text-lg font-medium text-gray-500">
+          <p className="w-[455px] text-lg font-medium text-gray-500 max-md:w-full">
             Its easy setup ensures businesses can start using it effortlessly,
             making financial management more straightforward and reliable.
           </p>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-3 max-md:w-full">
             <PaymentFeatureCard
               icon={
                 <Image
@@ -80,7 +81,7 @@ const OurPayment = () => {
           <CTAButton text="Get Started now" />
         </div>
       </div>
-      <div className="mt-20 flex gap-5">
+      <div className="mt-20 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
         <GrowthCard
           value="234"
           metric="M"

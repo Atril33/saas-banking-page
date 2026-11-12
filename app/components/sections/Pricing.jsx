@@ -3,12 +3,12 @@ import PricingCard from "../ui/PricingCard";
 
 const Pricing = () => {
   return (
-    <section className="mx-12.5 mt-20 flex flex-col items-center gap-4 bg-[image:var(--pattern-image)] bg-no-repeat py-15">
+    <section className="mx-12.5 mt-20 flex flex-col items-center gap-4 bg-[image:var(--pattern-image)] bg-no-repeat px-10 py-15 max-xl:bg-[image:none] max-md:w-[calc(100%-80px)]">
       <TagBadge text="Pricing Plan" />
-      <h2 className="w-[808px] text-center text-5xl font-semibold text-white">
+      <h2 className="w-[808px] text-center text-5xl font-semibold text-white max-[900px]:w-full max-xl:text-black">
         Select a plan that will empower your business growth
       </h2>
-      <p className="w-[544px] text-center text-lg text-white">
+      <p className="w-[544px] text-center text-lg text-white max-[900px]:w-full max-xl:text-gray-500">
         Each package includes personalized consultation and revisions to
         guarantee your satisfaction.
       </p>
@@ -23,7 +23,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="my-5 grid grid-cols-3 gap-5">
+        <div className="my-5 grid grid-cols-3 gap-5 max-xl:grid-cols-2 max-md:grid-cols-1">
           <PricingCard
             title="Starter Plan"
             des="Perfect for larger organizations with advanced needs"

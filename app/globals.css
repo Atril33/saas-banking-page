@@ -7,3 +7,11 @@
   --pattern-image: url('/assets/background-pattern.png');
   --color-primary: #1d9b5e;
 }
+
+@layer base {
+  html {
+    /* This sets the fluid anchor point */
+    font-size: clamp(0.875rem, 0.5rem + 1vw, 1rem);
+  }
+
+}

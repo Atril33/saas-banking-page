@@ -20,7 +20,10 @@ const FAQs = () => {
   return (
     <ul className="flex flex-col gap-2">
       {faqs.map((question, index) => (
-        <li className="w-[548px] rounded-[16px] bg-[#F2F5F7] p-5" key={index}>
+        <li
+          className="w-[548px] rounded-[16px] bg-[#F2F5F7] p-5 max-md:w-full"
+          key={index}
+        >
           <div className="flex items-start gap-4">
             <span className="bg-[theme(color.primary)] h-7 w-7 content-center rounded-full text-center text-base text-white">
               {index + 1}
