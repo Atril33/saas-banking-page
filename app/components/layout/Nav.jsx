@@ -15,6 +15,7 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setMenuActive(false);
+    document.body.style.overflow = "auto";
   };
 
   return (
@@ -29,7 +30,7 @@ const Navbar = () => {
       <ul
         className={`max-sm:center flex list-none gap-7 transition-all duration-300 ease-in-out max-lg:hidden max-sm:absolute max-sm:left-0 max-sm:block max-sm:h-[100vh] max-sm:w-full max-sm:bg-white max-sm:text-center [&_li]:text-base [&_li]:text-white max-sm:[&_li]:m-4 max-sm:[&_li]:text-black ${menuActive ? "top-0" : "max-sm:top-[calc(-100vh-50px)]"}`}
       >
-        <li style={{ marginTop: "50px" }}>About</li>
+        <li className="max-sm:mt-20">About</li>
         <li>Services</li>
         <li>Pricing</li>
         <li>Company</li>

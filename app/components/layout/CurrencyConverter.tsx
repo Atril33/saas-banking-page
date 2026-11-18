@@ -1,7 +1,42 @@
+"use client";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import CurrencyConverterField from "../ui/CurrencyConverterField";
 
+export interface ExchangeRateList {
+  result: string;
+  documentation: string;
+  terms_of_use: string;
+  time_last_update_unix: number;
+  time_last_update_utc: string;
+  time_next_update_unix: number;
+  time_next_update_utc: string;
+  base_code: string;
+  conversion_rates: Record<string, number>;
+}
+
+
 const CurrencyConverter = () => {
+  const [rates, setRates] = useState<ExchangeRateList | null>(null);
+
+  useEffect(() => {
+    const currencyList = async () => {
+      try {
+        const res = await fetch('/api/convert');
+        if (!res.ok) throw new Error('Failed to fetch API')
+        const data = await res.json();
+        setRates(data)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    currencyList()
+
+
+  }, [])
+
+
   return (
     <div className="flex items-center justify-center gap-4">
       <Image
@@ -12,7 +47,7 @@ const CurrencyConverter = () => {
         className="max-[1075px]:hidden"
       />
       <div className="relative flex flex-col items-center justify-center rounded-[25px] bg-white p-3">
-        <CurrencyConverterField />
+        <CurrencyConverterField currencies={rates?.conversion_rates ?? {}} />
         <Image
           src="/assets/conversion-icon.png"
           alt="Conversion Icon"
@@ -20,12 +55,12 @@ const CurrencyConverter = () => {
           height={34}
           className="absolute top-[67px]"
         />
-        <CurrencyConverterField />
+        <CurrencyConverterField currencies={rates?.conversion_rates ?? {}} /> 
         <h3 className="text-xl font-semibold text-black">Currency Markets</h3>
         <p className="text-sm text-gray-500">
           Latest prices of top crypto assets.
         </p>
-        <button className="mt-2 w-full rounded-[100px] bg-[#0F2028] p-2 text-base text-white uppercase">
+        <button className="mt-2 w-full cursor-pointer rounded-[100px] bg-[#0F2028] p-2 text-base text-white uppercase">
           Convert
         </button>
       </div>
