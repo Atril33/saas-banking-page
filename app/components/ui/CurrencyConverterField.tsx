@@ -1,39 +1,52 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import type { ExchangeRateList } from "../layout/CurrencyConverter";
 
-const CurrencyConverterField = ({
-  currencies,
-}: {
+
+type CurrencyConverterFieldProps = {
   currencies: ExchangeRateList["conversion_rates"];
-}) => {
+  setToggle: React.Dispatch<React.SetStateAction<boolean>>;
+  opened: boolean;
+  currency: string;
+  setCurrency: React.Dispatch<React.SetStateAction<boolean>>;
+  icon: string;
+  setIcon: React.Dispatch<React.SetStateAction<string>>
+  readonly: boolean
+  setAmount: React.Dispatch<React.SetStateAction<number>>;
+  convertedAmount: number;
 
-   const [isOpened, setIsOpened] = useState<boolean>(false);
-   const [currencySelect, setCurrencySelect] = useState<string>('USD');
-   const [currencyIcon, setCurrencyIcon] = useState<string>('https://flagcdn.com/56x42/us.png')
-   const currencyCodes = Object.keys(currencies);
+  // amount: number | string; 
+  // onAmountChange: (value: number) => number;
+  // selectedCurrency: string
+};
 
-   const selectCurrency = (e: React.MouseEvent<HTMLLIElement>, currency:string) => {
-    let countryCode = currency.slice(0,2).toLowerCase()
-    let flag = `https://flagcdn.com/56x42/${countryCode}.png`
-    e.stopPropagation();
-    setCurrencySelect(currency);
-    setCurrencyIcon(flag)
-    setIsOpened(false);
-  }
-
+const CurrencyConverterField = ({currencies,  setToggle, opened, currency, setCurrency, icon, setIcon, setAmount, convertedAmount, readonly}:CurrencyConverterFieldProps) => {
+  const currencyCodes = Object.keys(currencies);
   return (
     <div className="mb-2 flex w-full items-center justify-between rounded-[20px] border-[12px] border-[#EFF2F1] bg-white relative">
 
-      <div className="flex items-center justify-center gap-1 p-2 text-base font-medium" onClick={() => setIsOpened((prev) => !prev)}>
-        {isOpened ? (  <ul className="bg-white flex items-center justify-center p-2 text-base font-medium flex-col max-h-[400px] overflow-y-scroll w-full rounded-[8px] absolute bottom-0 left-0">
-        {currencyCodes.map((currency, index) => (
-          <li className="bg-white w-full p-2 cursor-pointer" key={index} onClick={(e) => selectCurrency(e, currency)}>{currency}</li>
-        ))}
-      </ul>) : (<></>)}
+      <div className="flex items-center justify-center gap-1 p-2 text-base font-medium" onClick={() =>  setToggle((prev) => !prev)}>
+       
+        { opened ? (<ul className="absolute bottom-0 left-0 flex max-h-[400px] w-full flex-col items-center justify-center overflow-y-scroll rounded-[8px] bg-white p-2 text-base font-medium">
+          {currencyCodes.map((currency, index) => (
+            <li
+              className="w-full cursor-pointer bg-white p-2 flex justify-between"
+              key={index}
+              onClick={() => {
+                 setCurrency(currency)
+                   let countryCode = currency.slice(0,2).toLowerCase()
+                   let flag = `https://flagcdn.com/56x42/${countryCode}.png`
+                   setIcon(flag)
+                }
+                }
+            >
+              {currency} <span className="text-medium text-gray-500">{currencies[currency].toFixed(2)}</span>
+            </li>
+          ))}
+        </ul>) : (<></>)}  
         
-        <img src={currencyIcon} alt="USD" width={28} height={28} />
-        {currencySelect}
+         <img src={icon} alt="USD" width={28} height={28} />
+        {currency}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -55,6 +68,9 @@ const CurrencyConverterField = ({
           type="number"
           placeholder="0.00"
           className="border-none text-right outline-none"
+          value={convertedAmount}
+          onChange={(e) => setAmount(Number(e.target.value))}
+          readOnly={readonly} 
         />
       </div>
     </div>
