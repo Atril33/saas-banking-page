@@ -1,6 +1,6 @@
 const CtaButton = ({ text }) => {
   return (
-    <button className="bg-[theme(color.primary)] flex items-center justify-center gap-2 rounded-[100px] px-8 py-3.5 text-base text-white">
+    <button className="bg-[theme(color.primary)] flex cursor-pointer items-center justify-center gap-2 rounded-[100px] px-8 py-3.5 text-base text-white">
       {text}
       <svg
         xmlns="http://www.w3.org/2000/svg"

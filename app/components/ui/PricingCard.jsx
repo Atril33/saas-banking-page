@@ -25,7 +25,7 @@ const PricingCard = ({ title, des, pricing, metric, options }) => {
           </li>
         ))}
       </ul>
-      <button className="bg-[theme(color.primary)] rounded-[100px] px-2.5 py-4 text-base font-medium text-white">
+      <button className="bg-[theme(color.primary)] cursor-pointer rounded-[100px] px-2.5 py-4 text-base font-medium text-white">
         Select This Plan
       </button>
     </div>

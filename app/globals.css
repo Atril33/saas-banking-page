@@ -12,6 +12,11 @@
   html {
     /* This sets the fluid anchor point */
     font-size: clamp(0.875rem, 0.5rem + 1vw, 1rem);
+    scroll-behavior: smooth;
   }
 
+}
+
+body {
+  overflow-x: clip;
 }

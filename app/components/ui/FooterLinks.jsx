@@ -5,7 +5,7 @@ const FooterLinks = ({ title, links }) => {
       <ul className="list-none">
         {links.map((link, index) => (
           <li className="font-regular my-2 text-base text-mist-300" key={index}>
-            {link}
+            <a href="#">{link}</a>
           </li>
         ))}
       </ul>

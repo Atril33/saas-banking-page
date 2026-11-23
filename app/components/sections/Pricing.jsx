@@ -7,7 +7,10 @@ const Pricing = () => {
   const [pricingType, setPricingType] = useState("monthly");
 
   return (
-    <section className="mx-12.5 mt-20 flex flex-col items-center gap-4 bg-[image:var(--pattern-image)] bg-no-repeat px-10 py-15 max-xl:bg-[image:none] max-md:w-[calc(100%-80px)]">
+    <section
+      className="mx-12.5 mt-20 flex max-w-[1350px] flex-col items-center gap-4 bg-[image:var(--pattern-image)] bg-no-repeat px-10 py-15 max-xl:bg-[image:none] max-md:w-[calc(100%-80px)]"
+      id="pricing"
+    >
       <TagBadge text="Pricing Plan" />
       <h2 className="w-[808px] text-center text-5xl font-semibold text-white max-[900px]:w-full max-xl:text-black">
         Select a plan that will empower your business growth

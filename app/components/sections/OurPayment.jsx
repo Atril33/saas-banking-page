@@ -6,7 +6,7 @@ import GrowthCard from "../ui/GrowthCard";
 
 const OurPayment = () => {
   return (
-    <section className="mx-12.5 mt-20 flex flex-col">
+    <section className="mx-12.5 mt-20 flex max-w-[1350px] flex-col">
       <div className="flex items-start justify-between gap-4 max-[885px]:flex-col">
         <div>
           <Image

@@ -20,7 +20,7 @@ export default function Home() {
     <OurPayment />
     <Pricing />
     <SmartBanking />
-    {/* <Testimonials /> */}
+    <Testimonials />
     <TrustSection />
     <Footer />
     </>

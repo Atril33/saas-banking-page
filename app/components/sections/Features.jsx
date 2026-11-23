@@ -4,7 +4,10 @@ import FeatureCard from "../ui/FeatureCard";
 
 const Features = () => {
   return (
-    <section className="mx-12.5 mt-20 flex flex-col items-center justify-center gap-4">
+    <section
+      className="mx-12.5 mt-20 flex max-w-[1350px] flex-col items-center justify-center gap-4"
+      id="services"
+    >
       <TagBadge text="Features" />
       <h2 className="w-[798px] text-center text-[4rem] leading-[4rem] font-semibold text-black max-md:w-full">
         Banking Reimagined for the Future You

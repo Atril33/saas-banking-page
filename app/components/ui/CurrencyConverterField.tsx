@@ -8,26 +8,24 @@ type CurrencyConverterFieldProps = {
   setToggle: React.Dispatch<React.SetStateAction<boolean>>;
   opened: boolean;
   currency: string;
-  setCurrency: React.Dispatch<React.SetStateAction<boolean>>;
+  setCurrency: React.Dispatch<React.SetStateAction<string>>;
   icon: string;
   setIcon: React.Dispatch<React.SetStateAction<string>>
   readonly: boolean
   setAmount: React.Dispatch<React.SetStateAction<number>>;
-  convertedAmount: number;
-
-  // amount: number | string; 
-  // onAmountChange: (value: number) => number;
-  // selectedCurrency: string
+  value: number;
 };
 
-const CurrencyConverterField = ({currencies,  setToggle, opened, currency, setCurrency, icon, setIcon, setAmount, convertedAmount, readonly}:CurrencyConverterFieldProps) => {
+const CurrencyConverterField = ({currencies,  setToggle, opened, currency, setCurrency, icon, setIcon, setAmount, value, readonly}:CurrencyConverterFieldProps) => {
   const currencyCodes = Object.keys(currencies);
   return (
     <div className="mb-2 flex w-full items-center justify-between rounded-[20px] border-[12px] border-[#EFF2F1] bg-white relative">
 
       <div className="flex items-center justify-center gap-1 p-2 text-base font-medium" onClick={() =>  setToggle((prev) => !prev)}>
        
-        { opened ? (<ul className="absolute bottom-0 left-0 flex max-h-[400px] w-full flex-col items-center justify-center overflow-y-scroll rounded-[8px] bg-white p-2 text-base font-medium">
+        { opened ? (
+<ul className="absolute bottom-0 left-0 mt-1 flex max-h-[400px] w-full flex-col overflow-y-auto rounded-[8px] bg-white p-2 text-base font-medium">
+
           {currencyCodes.map((currency, index) => (
             <li
               className="w-full cursor-pointer bg-white p-2 flex justify-between"
@@ -68,7 +66,7 @@ const CurrencyConverterField = ({currencies,  setToggle, opened, currency, setCu
           type="number"
           placeholder="0.00"
           className="border-none text-right outline-none"
-          value={convertedAmount}
+          value={value}
           onChange={(e) => setAmount(Number(e.target.value))}
           readOnly={readonly} 
         />

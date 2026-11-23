@@ -3,7 +3,7 @@ import CTAButton from "../ui/CTAButton";
 
 const TrustSection = () => {
   return (
-    <section className="relative mx-12.5 mt-20 flex h-[640px] flex-col items-center justify-center gap-4 rounded-[50px] bg-[image:var(--pattern-image)] bg-center">
+    <section className="relative mx-12.5 mt-20 flex h-[640px] max-w-[1350px] flex-col items-center justify-center gap-4 rounded-[50px] bg-[image:var(--pattern-image)] bg-center">
       <div className="flex items-center gap-2 text-base text-white">
         <Image
           src="/assets/ratings.png"

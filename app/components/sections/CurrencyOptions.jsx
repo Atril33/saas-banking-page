@@ -4,7 +4,7 @@ import CTAButton from "../ui/CTAButton";
 
 const CurrencyOptions = () => {
   return (
-    <section className="mx-12.5 mt-20 flex justify-between max-[885px]:flex-col">
+    <section className="mx-12.5 mt-20 flex max-w-[1350px] justify-between max-[885px]:flex-col">
       <div className="flex flex-col items-start gap-4 max-md:w-full">
         <TagBadge text="Limitless currency options" />
         <h2 className="w-[536px] text-[4rem] leading-[64px] font-semibold text-black max-md:w-full">

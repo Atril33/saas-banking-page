@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const RecentClient = () => {
   return (
-    <section className="my-10 flex flex-col items-center justify-center">
+    <section
+      className="my-10 flex max-w-[1350px] flex-col items-center justify-center"
+      id="about"
+    >
       <h2 className="text-center text-[2.5rem] font-semibold text-black max-md:text-[2rem]">
         Our Recent Clients & Partners
       </h2>

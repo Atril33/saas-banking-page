@@ -4,7 +4,7 @@ import FAQs from "../ui/FAQs";
 
 const SmartBanking = () => {
   return (
-    <section className="mx-12.5 mt-20 flex justify-between gap-4 max-[885px]:flex-col">
+    <section className="mx-12.5 mt-20 flex max-w-[1350px] justify-between gap-4 max-[885px]:flex-col">
       <div>
         <Image
           src="/assets/currency-rates.png"

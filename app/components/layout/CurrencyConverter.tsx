@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useState, useEffect, HTMLInputTypeAttribute } from "react";
 import CurrencyConverterField from "../ui/CurrencyConverterField";
-import { ReactFormState } from "react-dom/client";
 
 export interface ExchangeRateList {
   result: string;
@@ -43,20 +42,41 @@ const CurrencyConverter = () => {
 
     currencyList()
 
+ 
+     
+  
 
   }, [])
 
+  const calculateConversion = () => {
 
-  const handleConverter = ():void => {
-   
-    const finalAmount:number = (amount * rates?.conversion_rates[secondCurrency]) / rates?.conversion_rates[firstCurrency];
+  if (!rates?.conversion_rates) return;
 
-    setConvertedAmount(finalAmount.toFixed(2));
+  const fromRate = rates.conversion_rates[firstCurrency];
+  const toRate = rates.conversion_rates[secondCurrency];
 
-  
+
+  if (!fromRate || !toRate) return;
+
+  const finalAmount = (amount * toRate) / fromRate;
+  setConvertedAmount(Number(finalAmount));
+};
+
+useEffect(() => {
+  if (rates?.conversion_rates) {
+    calculateConversion();
+  }
+}, [rates]); 
+
+
+const handleConverter = ():void => {
+   calculateConversion()
+    
   }
 
-  
+
+
+
 
   return (
     <div className="flex items-center justify-center gap-4">
@@ -68,15 +88,15 @@ const CurrencyConverter = () => {
         className="max-[1075px]:hidden"
       />
       <div className="relative flex flex-col items-center justify-center rounded-[25px] bg-white p-3">
-        <CurrencyConverterField currencies={rates?.conversion_rates ?? {}} setToggle={setFirstOpened} opened={firstOpened} currency={firstCurrency} setCurrency={setFirstCurrency} icon={firstIcon} setIcon={setFirstIcon} amount={amount} setAmount={setAmount} readonly={false} />
+        <CurrencyConverterField currencies={rates?.conversion_rates ?? {}} setToggle={setFirstOpened} opened={firstOpened} currency={firstCurrency} setCurrency={setFirstCurrency} icon={firstIcon} setIcon={setFirstIcon} setAmount={setAmount} readonly={false} value={amount} />
         <Image
           src="/assets/conversion-icon.png"
           alt="Conversion Icon"
           width={34}
           height={34}
-          className="absolute top-[67px]"
+          className="absolute top-[64px] z-2"
         />
-        <CurrencyConverterField currencies={rates?.conversion_rates ?? {}} setToggle={setSecondOpened} opened={secondOpened} currency={secondCurrency} setCurrency={setSecondCurrency} icon={secondIcon} setIcon={setSecondIcon} convertedAmount={convertedAmount} readonly={true} /> 
+        <CurrencyConverterField currencies={rates?.conversion_rates ?? {}} setToggle={setSecondOpened} opened={secondOpened} currency={secondCurrency} setCurrency={setSecondCurrency} icon={secondIcon} setIcon={setSecondIcon} value={convertedAmount} readonly={true} setAmount={setAmount} /> 
 
         <h3 className="text-xl font-semibold text-black">Currency Markets</h3>
         <p className="text-sm text-gray-500">

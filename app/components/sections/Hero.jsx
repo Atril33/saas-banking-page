@@ -5,7 +5,7 @@ import CurrencyConverter from "../layout/CurrencyConverter";
 
 const Hero = () => {
   return (
-    <div className="h-250 w-full bg-[image:var(--pattern-image)] bg-no-repeat">
+    <div className="h-250 w-full max-w-[1350px] bg-[image:var(--pattern-image)] bg-no-repeat">
       <Header />
       <div className="mt-35 flex flex-col items-center justify-center gap-4">
         <div className="flex items-center gap-1 rounded-[100px] border-[1.5px] border-[#0A1519] bg-[#29383E] py-0.5 pr-3">
@@ -24,7 +24,7 @@ const Hero = () => {
         </p>
         <div className="m-5 flex items-center gap-2.5">
           <CTAButton text="Create account" />
-          <button className="text-whssite flex items-center justify-center gap-2 rounded-[100px] bg-white p-1 pr-8 text-base">
+          <button className="text-whssite flex cursor-pointer items-center justify-center gap-2 rounded-[100px] bg-white p-1 pr-8 text-base">
             <Image
               src="/assets/watch-video-icon.png"
               alt="Watch Tutorial"
