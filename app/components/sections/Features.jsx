@@ -5,7 +5,7 @@ import FeatureCard from "../ui/FeatureCard";
 const Features = () => {
   return (
     <section
-      className="mx-12.5 mt-20 flex max-w-[1350px] flex-col items-center justify-center gap-4"
+      className="mt-20 flex w-full max-w-[1350px] flex-col items-center justify-center gap-4 px-12.5"
       id="services"
     >
       <TagBadge text="Features" />

@@ -3,7 +3,7 @@ import FooterLinks from "../ui/FooterLinks";
 
 const Footer = () => {
   return (
-    <footer className="mt-20 flex w-full flex-col bg-[image:var(--pattern-image)] p-4">
+    <footer className="mt-20 flex w-full flex-col items-center bg-[image:var(--pattern-image)] bg-[length:100%_100%] bg-center bg-no-repeat p-4">
       <div className="items-first mx-12.5 mt-20 flex max-w-[1350px] flex-wrap justify-between gap-4">
         <div className="flex flex-col gap-6">
           <Image
