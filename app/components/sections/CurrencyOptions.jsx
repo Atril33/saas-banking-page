@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import img from "next/img";
 import TagBadge from "../ui/TagBadge";
 import CTAButton from "../ui/CTAButton";
 
@@ -17,7 +17,7 @@ const CurrencyOptions = () => {
 
         <ul className="[&_li]text-lg list-none [&_li]:my-2 [&_li]:flex [&_li]:items-center [&_li]:gap-2">
           <li className="currecy-item">
-            <Image
+            <img
               src="/assets/tick-icon.png"
               alt="Tick icon"
               width={20}
@@ -26,7 +26,7 @@ const CurrencyOptions = () => {
             Convert between currencies instantly.
           </li>
           <li className="currecy-item">
-            <Image
+            <img
               src="/assets/tick-icon.png"
               alt="Tick icon"
               width={20}
@@ -35,7 +35,7 @@ const CurrencyOptions = () => {
             Simple and intuitive platform for managing.
           </li>
           <li className="currecy-item">
-            <Image
+            <img
               src="/assets/tick-icon.png"
               alt="Tick icon"
               width={20}
@@ -49,7 +49,7 @@ const CurrencyOptions = () => {
       </div>
 
       <div>
-        <Image
+        <img
           src="/assets/currency-rates.png"
           alt="Currency Rate"
           width={614}

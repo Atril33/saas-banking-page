@@ -1,11 +1,11 @@
-import Image from "next/image";
+// import img from "next/img";
 import CTAButton from "../ui/CTAButton";
 
 const TrustSection = () => {
   return (
     <section className="relative mt-20 flex h-[640px] w-[calc(100%_-_100px)] max-w-[1350px] flex-col items-center justify-center gap-4 rounded-[50px] bg-[image:var(--pattern-image)]">
       <div className="flex items-center gap-2 text-base text-white">
-        <Image
+        <img
           src="/assets/ratings.png"
           alt="5 Stars Rating"
           width={100}
@@ -13,7 +13,7 @@ const TrustSection = () => {
         />{" "}
         4.9/5{" "}
       </div>
-      <Image
+      <img
         src="/assets/clients-images-frame.png"
         alt="Clients Pictures"
         width={200}

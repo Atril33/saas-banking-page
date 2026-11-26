@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/img";
 import FooterLinks from "../ui/FooterLinks";
 
 const Footer = () => {
@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="mt-20 flex w-full flex-col items-center bg-[image:var(--pattern-image)] bg-[length:100%_100%] bg-center bg-no-repeat p-4">
       <div className="items-first mx-12.5 mt-20 flex max-w-[1350px] flex-wrap justify-between gap-4">
         <div className="flex flex-col gap-6">
-          <Image
+          <img
             src="/assets/logos/logo.png"
             alt="Euphoria Logo"
             width={167}
@@ -20,7 +20,7 @@ const Footer = () => {
           <ul className="flex list-none items-center gap-2">
             <li>
               <a href="#">
-                <Image
+                <img
                   src="/assets/facebook.png"
                   alt="Facebook Icon"
                   width={50}
@@ -30,7 +30,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="#">
-                <Image
+                <img
                   src="/assets/linkedin.png"
                   alt="LinkedIn Icon"
                   width={50}
@@ -40,7 +40,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="#">
-                <Image
+                <img
                   src="/assets/instagram.png"
                   alt="Instagram Icon"
                   width={50}
@@ -50,7 +50,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="#">
-                <Image
+                <img
                   src="/assets/twitter.png"
                   alt="Twitter Icon"
                   width={50}
@@ -96,7 +96,7 @@ const Footer = () => {
           <h3 className="text-base font-medium text-white">Download our App</h3>
           <a href="#">
             <div className="flex w-full items-center justify-between gap-2 rounded-[12px] border border-mist-300 bg-[#2F3A34] px-10 py-3">
-              <Image
+              <img
                 src="/assets/google-play.png"
                 alt="Google Play Icon"
                 width={24}
@@ -110,7 +110,7 @@ const Footer = () => {
           </a>
           <a href="#">
             <div className="flex w-full items-center justify-between gap-2 rounded-[12px] border border-mist-300 bg-[#2F3A34] px-10 py-3">
-              <Image
+              <img
                 src="/assets/apple.png"
                 alt="Apple Store Icon"
                 width={24}

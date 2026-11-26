@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import img from "next/img";
 import TagBadge from "../ui/TagBadge";
 import FAQs from "../ui/FAQs";
 
@@ -6,7 +6,7 @@ const SmartBanking = () => {
   return (
     <section className="mt-20 flex w-full max-w-[1350px] justify-between gap-4 px-12.5 max-[885px]:flex-col">
       <div>
-        <Image
+        <img
           src="/assets/currency-rates.png"
           alt="Currency Rate"
           width={614}

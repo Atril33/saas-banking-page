@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import img from "next/img";
 import TagBadge from "../ui/TagBadge";
 import PaymentFeatureCard from "../ui/PaymentFeatureCard";
 import CTAButton from "../ui/CTAButton";
@@ -9,7 +9,7 @@ const OurPayment = () => {
     <section className="mt-20 flex w-full max-w-[1350px] flex-col px-12.5">
       <div className="flex items-start justify-between gap-4 max-[885px]:flex-col">
         <div>
-          <Image
+          <img
             src="/assets/currency-rates.png"
             alt="Currency Rate"
             width={614}
@@ -31,7 +31,7 @@ const OurPayment = () => {
           <div className="grid grid-cols-2 gap-3 max-md:w-full">
             <PaymentFeatureCard
               icon={
-                <Image
+                <img
                   src="/assets/feature-icons/secure-payment.png"
                   alt="Secure Payment"
                   width={50}
@@ -43,7 +43,7 @@ const OurPayment = () => {
 
             <PaymentFeatureCard
               icon={
-                <Image
+                <img
                   src="/assets/feature-icons/mobile-icon.png"
                   alt="Mobile Banking"
                   width={50}
@@ -55,7 +55,7 @@ const OurPayment = () => {
 
             <PaymentFeatureCard
               icon={
-                <Image
+                <img
                   src="/assets/feature-icons/smooth-transactions.png"
                   alt="Smooth Transactions"
                   width={50}
@@ -67,7 +67,7 @@ const OurPayment = () => {
 
             <PaymentFeatureCard
               icon={
-                <Image
+                <img
                   src="/assets/feature-icons/customer-support.png"
                   alt="Customer Support"
                   width={50}

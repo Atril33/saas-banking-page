@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+// import img from "next/img";
 
 const Navbar = () => {
   const [menuActive, setMenuActive] = useState<boolean>(false);
@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed z-999 flex h-24 w-full items-center justify-between bg-transparent backdrop-blur max-w-[1350px]">
-      <Image
+      <img
         src="/assets/logos/logo.png"
         alt="Euphoria Logo"
         width={130}

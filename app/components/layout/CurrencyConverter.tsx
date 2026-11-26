@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import img from "next/img";
 import { useState, useEffect, HTMLInputTypeAttribute } from "react";
 import CurrencyConverterField from "../ui/CurrencyConverterField";
 
@@ -80,7 +80,7 @@ const handleConverter = ():void => {
 
   return (
     <div className="flex items-center justify-center gap-4">
-      <Image
+      <img
         src="/assets/currency-converting.png"
         alt="Currency Converter"
         width={52}
@@ -89,7 +89,7 @@ const handleConverter = ():void => {
       />
       <div className="relative flex flex-col items-center justify-center rounded-[25px] bg-white p-3">
         <CurrencyConverterField currencies={rates?.conversion_rates ?? {}} setToggle={setFirstOpened} opened={firstOpened} currency={firstCurrency} setCurrency={setFirstCurrency} icon={firstIcon} setIcon={setFirstIcon} setAmount={setAmount} readonly={false} value={amount} />
-        <Image
+        <img
           src="/assets/conversion-icon.png"
           alt="Conversion Icon"
           width={34}
@@ -106,7 +106,7 @@ const handleConverter = ():void => {
           Convert
         </button>
       </div>
-      <Image
+      <img
         src="/assets/converted-currency.png"
         alt="Converted Currency"
         width={52}

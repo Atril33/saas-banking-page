@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import img from "next/img";
 
 const PricingCard = ({ title, des, pricing, metric, options }) => {
   return (
@@ -15,7 +15,7 @@ const PricingCard = ({ title, des, pricing, metric, options }) => {
             className="my-3 flex items-center gap-2 text-base text-white"
             key={index}
           >
-            <Image
+            <img
               src="/assets/tick-icon.png"
               alt="Tick Icon"
               width={15}

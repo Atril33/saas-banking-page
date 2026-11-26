@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import img from "next/img";
 
 const TestimonialsCard = ({ name, position, review }) => {
   return (
@@ -8,7 +8,7 @@ const TestimonialsCard = ({ name, position, review }) => {
         <p className="text-sm text-gray-500">{position}</p>
       </div>
       <p className="w-[284px] text-base font-medium text-gray-800">{review}</p>
-      <Image
+      <img
         src="/assets/ratings.png"
         alt="Star Rating"
         width={100}

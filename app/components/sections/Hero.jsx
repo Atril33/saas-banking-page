@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import image from "next/img";
 import Header from "../layout/Header";
 import CTAButton from "../ui/CTAButton";
 import CurrencyConverter from "../layout/CurrencyConverter";
@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="m-5 flex items-center gap-2.5">
           <CTAButton text="Create account" />
           <button className="text-whssite flex cursor-pointer items-center justify-center gap-2 rounded-[100px] bg-white p-1 pr-8 text-base">
-            <Image
+            <img
               src="/assets/watch-video-icon.png"
               alt="Watch Tutorial"
               width={40}
@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
 
             <div className="mr-20 flex w-54 items-center justify-between gap-2.5 rounded-[25px] bg-white px-4 py-5">
-              <Image
+              <img
                 src="/assets/currency-icon.png"
                 alt="Received History"
                 width={50}
@@ -72,7 +72,7 @@ const Hero = () => {
               <p className="text-base font-medium text-gray-500">Net Income</p>
               <div className="flex items-center justify-between gap-2.5">
                 <h4 className="text-2xl font-semibold text-black">$234.98K</h4>
-                <Image
+                <img
                   src="/assets/growing-icon.png"
                   alt="Growing Icon"
                   width={20}
@@ -83,14 +83,14 @@ const Hero = () => {
 
             <div className="ml-20 flex items-center justify-between gap-2.5 rounded-[25px] bg-white px-6 py-5">
               <div className="relative flex w-[90px] items-center">
-                <Image
+                <img
                   src="/assets/client-1.png"
                   alt="Client One"
                   width={54}
                   height={54}
                   className="absolute left-0"
                 />
-                <Image
+                <img
                   src="/assets/client-2.png"
                   alt="Client Two"
                   width={54}
